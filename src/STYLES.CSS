@@ -9,6 +9,10 @@
   
 }
 
+.description {
+  text-transform: capitalize;
+}
+
 html {
     background-image: url("../src/cloudy.jpg");
     background-position: center;
