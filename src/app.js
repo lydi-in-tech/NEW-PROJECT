@@ -27,18 +27,19 @@ function showTemp(response) {
   let humidElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#windSpeed");
   let dateElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   tempElement.innerHTML = Math.round(response.data.temperature.current);
   humidElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `Wind Speed: ${response.data.wind.speed}km/h`;
-  dateElement.innerHTML = `Last Update: ${formatDate(response.data.time * 1000)}`;
-
+  windElement.innerHTML = `Wind Speed:${Math.round(response.data.wind.speed)}%`
+  dateElement.innerHTML = formatDate(response.data.time * 1000);
+  iconElement.setAttribute("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
+  iconElement.setAttribute("alt", response.data.condition.description)
 }
-
 let apiKey = "o0c5f69b1t0fad2340ee5f05678ddda3";
-let city = "New York";
-let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
+let city = "Paris";
+let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
 
-axios.get(apiUrl).then(showTemp);
+  axios.get(apiUrl).then(showTemp)
