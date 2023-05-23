@@ -167,6 +167,10 @@ p {
   padding: 5px;
 }
 
-
+#celsius-link {
+  color: #212121;
+  font: 16px;
+  cursor: default;
+}
 
 
