@@ -4,10 +4,12 @@ function formatDate(timestamp) {
    if (hours < 10) {
     hours = `0${hours}`;
   }
+
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[date.getDay()];
 
@@ -22,8 +24,7 @@ function displayForecast() {
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
   days.forEach(function (day) {
     forecastHTML = forecastHTML + `
-  
-      <div class="col-2">
+    <div class="col-2">
         <div class="weather-forecast-date">${day}</div>
         <img src="https://www.yr.no/assets/images/weather-symbols/light-mode/default/svg/01d.svg" alt="" width="42"
         />
@@ -43,11 +44,7 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-
 }
-
-
-
 
 function showTemp(response) {
   
@@ -88,8 +85,6 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
@@ -97,7 +92,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 let celsiusTemp = null;
-
 
 function convertToFahrenheit(event) {
   event.preventDefault();
