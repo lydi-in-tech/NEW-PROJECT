@@ -16,7 +16,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily)
   let forecastElement = document.querySelector("#weather-forecast");
 
    let forecastHTML =`<div class="row">`;
@@ -46,6 +47,16 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+
+function getForecast(coordinates) {
+  let apiKey2 = "4c9b53e4f8f5eb00df5915bdca340605";
+  let lat = coordinates.latitude;
+  let lon = coordinates.longitude;
+  let apiUrl1 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey2}&units=metric`;
+  axios.get(apiUrl1).then(displayForecast);
+  console.log(apiUrl1)
+}
+
 function showTemp(response) {
   
   let cityElement = document.querySelector("#city");
@@ -55,7 +66,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#windSpeed");
   let dateElement = document.querySelector("#time");
   let iconElement = document.querySelector("#icon");
-
+  
   celsiusTemp = response.data.temperature.current
 
   cityElement.innerHTML = response.data.city;
@@ -66,6 +77,9 @@ function showTemp(response) {
   dateElement.innerHTML = `Last update: ${formatDate(response.data.time * 1000)}`;
   iconElement.setAttribute("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
   iconElement.setAttribute("alt", response.data.condition.description)
+  
+  getForecast(response.data.coordinates);
+  
 }
 
 function searchCity(city) {
@@ -111,4 +125,7 @@ function convertToCelsius(event) {
 }
 
 searchCity("New York");
-displayForecast();
+
+
+
+
