@@ -15,16 +15,13 @@ function formatDate(timestamp) {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastElement = document.querySelector("#forecast");
 
-   let forecastHTML =`<div class="row">`;
-
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
-    forecastHTML = forecastHTML + `
+  let forecastHTML =`<div class="row">`;
+  forecastHTML = forecastHTML + `
   
       <div class="col-2">
-        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-date">Thur</div>
         <img src="https://www.yr.no/assets/images/weather-symbols/light-mode/default/svg/01d.svg" alt="" width="42"
         />
    
@@ -38,12 +35,27 @@ function displayForecast() {
     </div>
   
   `;
-    
-  });
 
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `
+  
+      <div class="col-2">
+        <div class="weather-forecast-date">Thur</div>
+        <img src="https://www.yr.no/assets/images/weather-symbols/light-mode/default/svg/01d.svg" alt="" width="42"
+        />
+   
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature-max">
+          18° 
+        </span>
+        /
+        <span class="weather-forecast-temperatue-min">12° </span>
+      </div>
+    </div>
+  
+  
+  forecastHTML= forecastHTML + `</div>`;
+
   forecastElement.innerHTML = forecastHTML;
-
 }
 
 

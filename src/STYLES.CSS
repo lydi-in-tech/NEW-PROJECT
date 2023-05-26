@@ -173,4 +173,9 @@ p {
   cursor: default;
 }
 
-
+.weather-forecast-temperatures {
+  position: absolute;
+  top: 20px;
+  color: blue;
+  left: 50px;
+}
