@@ -57,7 +57,7 @@ function getForecast(coordinates) {
   console.log(apiUrl1)
 }
 
-function showTemp(response) {
+function showTemp(response) { 
   
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
