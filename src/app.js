@@ -16,32 +16,49 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+
+  return days[day];
+}
+
+
 function displayForecast(response) {
-  console.log(response.data.daily)
+  let forecast = response.data.daily;
+  console.log(forecast)
+  
   let forecastElement = document.querySelector("#weather-forecast");
 
    let forecastHTML =`<div class="row">`;
 
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
-    forecastHTML = forecastHTML + `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML = forecastHTML +
+        `
     <div class="col-2">
-        <div class="weather-forecast-date">${day}</div>
-        <img src="https://www.yr.no/assets/images/weather-symbols/light-mode/default/svg/01d.svg" alt="" width="42"
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
+        </div>
+        
+        <img src="https://www.yr.no/assets/images/weather-symbols/light-mode/default/svg/${forecastDay.weather[0].icon}.svg" alt="" width="42"
         />
    
       <div class="weather-forecast-temperatures">
         <span class="weather-forecast-temperature-max">
-          18° 
+          ${Math.round(forecastDay.temp.max)}° 
         </span>
         /
-        <span class="weather-forecast-temperatue-min">12° </span>
+        <span class="weather-forecast-temperatue-min"> ${Math.round(forecastDay.temp.min)}°  </span>
       </div>
     </div>
   
   `;
+    }
+      
     
-  });
+  } );
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -54,7 +71,7 @@ function getForecast(coordinates) {
   let lon = coordinates.longitude;
   let apiUrl1 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey2}&units=metric`;
   axios.get(apiUrl1).then(displayForecast);
-  console.log(apiUrl1)
+  
 }
 
 function showTemp(response) { 
