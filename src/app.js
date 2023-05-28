@@ -19,20 +19,17 @@ function formatDate(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
 
-
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(forecast)
   
   let forecastElement = document.querySelector("#weather-forecast");
 
    let forecastHTML =`<div class="row">`;
-
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -56,14 +53,12 @@ function displayForecast(response) {
   
   `;
     }
-      
-    
-  } );
+  }
+  );
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
 
 function getForecast(coordinates) {
   let apiKey2 = "4c9b53e4f8f5eb00df5915bdca340605";
@@ -71,7 +66,6 @@ function getForecast(coordinates) {
   let lon = coordinates.longitude;
   let apiUrl1 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey2}&units=metric`;
   axios.get(apiUrl1).then(displayForecast);
-  
 }
 
 function showTemp(response) { 
@@ -101,9 +95,7 @@ function showTemp(response) {
 
 function searchCity(city) {
   let apiKey = "o0c5f69b1t0fad2340ee5f05678ddda3";
-
 let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
-
 axios.get(apiUrl).then(showTemp);
 }
 
