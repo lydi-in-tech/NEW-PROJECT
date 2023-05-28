@@ -14,7 +14,9 @@
 <body>
   
   <form class="search-form" id="search-form"> 
+
     <div class="row">
+      <div class="search-bar">
       <div class="col-9">
     <input type="search" placeholder="Search for a city" 
     autofocus="on"
@@ -23,12 +25,15 @@
      id="city-input"
      />
     </div>
+    </div>
+   
     <div class="col-1">
       <input 
       type="submit"
       value="Search"
       class="btn btn-primary w-100"
       />
+      
     
     </div>
     </div>
@@ -38,12 +43,12 @@
 <div class="icon" ><img src="" width="200" height="200""alt="clear" id="icon"> 
 <div class="temp" id="temp">21</div>
 
-  <span id="celcius">
+  <span id="celcius" class="celcius">
     <strong id="temperature"></strong>
     <a href="#" id="celsius-link">°C</a>|<a href="#" id="fahrenheit-link">°F</a>
   </span>
 </div> 
-<h1><div id="city">New York</div>
+<h1><div id="city" class="city">New York</div>
   </h1>
 <p>
  
@@ -60,7 +65,7 @@
     <div class="row">
       <div class="col-2">
         <div class="weather-forecast-date">Thur</div>
-        <img src="https://www.yr.no/assets/images/weather-symbols/light-mode/default/svg/01d.svg" alt="" width="42"
+        <img src="https://www.yr.no/assets/images/weather-symbols/light-mode/default/svg/01d.svg" alt="weather-image" width="100"
         />
    
       <div class="weather-forecast-temperatures">

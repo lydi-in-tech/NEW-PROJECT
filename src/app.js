@@ -84,7 +84,7 @@ function showTemp(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   tempElement.innerHTML = Math.round(celsiusTemp);
   humidElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `Wind Speed:${Math.round(response.data.wind.speed)}%`
+  windElement.innerHTML = `Wind Speed: ${Math.round(response.data.wind.speed)}%`
   dateElement.innerHTML = `Last update: ${formatDate(response.data.time * 1000)}`;
   iconElement.setAttribute("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
   iconElement.setAttribute("alt", response.data.condition.description)
