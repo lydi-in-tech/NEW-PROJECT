@@ -12,33 +12,35 @@
 </head>
 
 <body>
+  <div class="search-bar">
+  <form  id="search-form"> 
   
-  <form class="search-form" id="search-form"> 
-
     <div class="row">
+      
       <div class="search-bar">
-      <div class="col-9">
+
+      <div class="col-9 search-form">
+
     <input type="search" placeholder="Search for a city" 
     autofocus="on"
     autocomplete="off"
-    class="form-control"
+    class="form-control search-input"
      id="city-input"
+     
      />
-    </div>
-    </div>
-   
-    <div class="col-1">
-      <input 
-      type="submit"
-      value="Search"
-      class="btn btn-primary w-100"
-      />
-      
     
+
     </div>
+<div class="col-3 p-0">
+        <input type="submit" class="btn btn-primary w-200" value="Search">
+      </div>
     </div>
-    
+
+    </div>
+
   </form>
+  </div>
+
 
 <div class="icon" ><img src="" width="200" height="200""alt="clear" id="icon"> 
 <div class="temp" id="temp">21</div>
