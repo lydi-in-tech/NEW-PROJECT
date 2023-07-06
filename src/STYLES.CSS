@@ -25,14 +25,17 @@ font-size: 20px;
     top: 185px;
 }
 
-.weather-forecast{
+.weather-forecast {
   position: absolute;
-    top: 500px;
-    left: 400px;
-    text-align: center;
-    font-size: 18px;
-    color: #D0D0D7;
+  top: 500px;
+  left: 400px;
+  text-align: center;
+  font-size: 18px;
+  color: #D0D0D7;
+  margin-top: 20px;
 }
+
+
 
 .city {
   position: absolute;
@@ -96,7 +99,7 @@ footer {
   margin-top: 40px;
   
   position: absolute;
-  top: 600px;
+  top: 500px;
   left: 250px;
   text-align: center;
 }
