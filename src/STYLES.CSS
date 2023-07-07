@@ -1,18 +1,22 @@
-.icon{
+.icon {
   position: absolute;
   left: 200px;
-  top: 150px;
+  top: 120px;
 }
 
-.temp{
+.icon img {
+  position: absolute;
+  top: -20px;
+}
+.temp {
   font-size: 50px;
   position: absolute;
-    left: 200px;
-    top: 22px;
+  left: 200px;
+  top: 22px;
 }
 
-.celcius{
-font-size: 20px;
+.celcius {
+  font-size: 20px;
   position: absolute;
   left: 270px;
   top: 35px;
@@ -20,9 +24,9 @@ font-size: 20px;
 
 .info {
   font-size: 20px;
-    position: absolute;
-    left: 900px;
-    top: 185px;
+  position: absolute;
+  left: 900px;
+  top: 185px;
 }
 
 .weather-forecast {
@@ -30,54 +34,74 @@ font-size: 20px;
   top: 500px;
   left: 400px;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
   color: #D0D0D7;
   margin-top: 20px;
 }
 
-
-
 .city {
   position: absolute;
-    left: 250px;
-    top: 330px;
-    
+  left: 250px;
+  top: 290px;
+
 }
 
 .time {
-    position: absolute;
-      left: 400px;
-      top: 250px;
-      l
+  position: absolute;
+  left: 400px;
+  top: 230px;
+  l
 }
 
 .search-bar .search-input {
   height: 30px;
   width: 500px;
   background: #f9f7fe;
-    border: none;
-    border-radius: 6px;
-    color: rgba(39, 33, 66, .4);
-    display: inline-block;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 20px 20px;
+  border: none;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, .4);
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px 20px;
 }
 
 .search-form {
 
   position: absolute;
-  top: 80px;
+  top: 40px;
   left: 250px;
   display: flex;
 
   font-size: 16px;
 }
 
+
+.weather-forecast {
+position: absolute;
+  top: 420px;
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+  left: 250px;
+
+}
+ 
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
 .btn-primary {
   position: absolute;
-  left: 900px;
-  top: 78px;
+  left: 880px;
+  top: 38px;
   height: 40px;
   width: 100px;
   padding: 20px 20px;
@@ -90,16 +114,36 @@ font-size: 20px;
 }
 
 
+.weather-forecast-date {
+  font-size: 18px;
+  opacity: 0.5;
+}
 
+.weather-forecast-temperatures {
+  font-size: 16px;
+
+}
+
+.weather-forecast-temperature-max {
+  opacity: 0.5;
+  font-weight: bold;
+}
 
 footer {
   color: rgba(39, 33, 66, .4);
   font-size: 15px;
   line-height: 18px;
   margin-top: 40px;
-  
+
   position: absolute;
-  top: 500px;
+  top: 548px;
   left: 250px;
   text-align: center;
+}
+
+.content {
+  background-color: bisque;
+    margin: 60px auto;
+      max-width: 800px;
+    
 }

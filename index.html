@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <div class="content">
   <div class="search-bar">
   <form  id="search-form"> 
   
@@ -42,7 +43,7 @@
   </div>
 
 
-<div class="icon" ><img src="" width="200" height="200""alt="clear" id="icon"> 
+<div class="icon" ><img src="http://openweathermap.org/img/wn/50d@2x.png" width="200" height="200""alt="clear" id="icon"> 
 <div class="temp" id="temp">21</div>
 
   <span id="celcius" class="celcius">
@@ -65,10 +66,13 @@
 
   <div class="weather-forecast" id="weather-forecast">
     <div class="row">
-      <div class="col-2">
+      <div class="col-3">
         <div class="weather-forecast-date">Thur</div>
-       <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="weather-image" width="100"
+        <div class="weather-icon">
+          <img src="http://openweathermap.org/img/wn/50d@2x.png"  alt="weather-image" width="200" height="100"
         /> 
+        </div>
+       
   
    
       <div class="weather-forecast-temperatures">
@@ -83,7 +87,10 @@
   </div>
 
 <script src="src/app.js"></script>
+
+
 <footer>This project was coded by <a href="https://github.com/lydi-in-tech/NEW-PROJECT.git" target="_blank" rel="noopener noreferrer">Lydia Pelesane</a> and is <a href="https://github.com/shecodesio/weather" target="_blank" rel="noopener noreferrer">open-sourced on GitHub</a> and <a href="https://shecodes-weather.netlify.app/" target="_blank" rel="noopener noreferrer">hosted on Netlify</a></footer>
+</div>
 </body>
 </html>
 
