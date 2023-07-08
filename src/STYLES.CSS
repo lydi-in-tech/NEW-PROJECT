@@ -124,12 +124,13 @@
 }
 
 .weather-forecast-temperature-max {
-  opacity: 0.5;
+  opacity: 0.8;
   font-weight: bold;
+  color: #000;
 }
 
 footer {
-  color: rgba(39, 33, 66, .4);
+  color:black;
   font-size: 15px;
   line-height: 18px;
   margin-top: 40px;
