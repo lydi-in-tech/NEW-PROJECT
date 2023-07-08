@@ -1,13 +1,14 @@
 .icon {
   position: absolute;
   left: 200px;
-  top: 120px;
+  top: 110px;
 }
 
 .icon img {
   position: absolute;
   top: -20px;
 }
+
 .temp {
   font-size: 50px;
   position: absolute;
@@ -23,7 +24,7 @@
 }
 
 .info {
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
   left: 900px;
   top: 185px;
@@ -42,16 +43,16 @@
 .city {
   position: absolute;
   left: 250px;
-  top: 290px;
+  top: 250px;
 
 }
 
 .time {
   position: absolute;
-  left: 400px;
-  top: 230px;
-  l
+  left: 250px;
+  top: 295px;
 }
+
 
 .search-bar .search-input {
   height: 30px;
@@ -78,15 +79,15 @@
 
 
 .weather-forecast {
-position: absolute;
-  top: 420px;
+  position: absolute;
+  top: 390px;
   margin-top: 20px;
   text-align: center;
   color: #000;
   left: 250px;
 
 }
- 
+
 .weather-forecast-date {
   font-size: 16px;
   opacity: 0.5;
@@ -110,7 +111,6 @@ position: absolute;
 .col-9 {
   flex: 0 0 auto;
   width: 75%;
-
 }
 
 
@@ -121,7 +121,6 @@ position: absolute;
 
 .weather-forecast-temperatures {
   font-size: 16px;
-
 }
 
 .weather-forecast-temperature-max {
@@ -134,16 +133,26 @@ footer {
   font-size: 15px;
   line-height: 18px;
   margin-top: 40px;
-
   position: absolute;
   top: 548px;
   left: 250px;
   text-align: center;
 }
 
-.content {
-  background-color: bisque;
-    margin: 60px auto;
-      max-width: 800px;
-    
+body {
+  margin: 0;
+  padding: 0;
+  padding-left: 140px;
+ padding-right: 140px;
 }
+
+.container {
+  border: 1px solid lightblue;
+  background-color: rgb(191, 212, 219);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 550px;
+border-radius: 10px;
+box-shadow: 0 0 5px 1px lightgrey;
+}
+
