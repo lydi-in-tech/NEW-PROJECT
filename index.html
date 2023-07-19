@@ -11,34 +11,35 @@
     <title>weather app</title>
 </head>
 
-<body>
-  
-  <form class="search-form" id="search-form"> 
 
+<div class="search-bar">
+  <form  id="search-form"> 
+  
     <div class="row">
+      
       <div class="search-bar">
-      <div class="col-9">
+
+      <div class="col-9 search-form">
+
     <input type="search" placeholder="Search for a city" 
     autofocus="on"
     autocomplete="off"
     class="form-control"
      id="city-input"
+     
      />
-    </div>
-    </div>
-   
-    <div class="col-1">
-      <input 
-      type="submit"
-      value="Search"
-      class="btn btn-primary w-100"
-      />
-      
     
+
     </div>
+<div class="col-3 p-0">
+        <input type="submit" class="btn btn-primary w-200" value="Search">
+      </div>
     </div>
-    
+
+    </div>
+
   </form>
+  </div>
 
 <div class="icon" ><img src="" width="200" height="200""alt="clear" id="icon"> 
 <div class="temp" id="temp">21</div>
@@ -84,6 +85,10 @@
 <div class="creator">
   <a href="https://github.com/lydi-in-tech/NEW-PROJECT.git">Open-source Code by</a>
 Lydia Pelesane
+</div>
+
+<footer>This project was coded by <a href="https://github.com/lydi-in-tech/NEW-PROJECT.git" target="_blank" rel="noopener noreferrer">Lydia Pelesane</a> and is <a href="https://github.com/shecodesio/weather" target="_blank" rel="noopener noreferrer">open-sourced on GitHub</a> and <a href="https://shecodes-weather.netlify.app/" target="_blank" rel="noopener noreferrer">hosted on Netlify</a></footer>
+
 </div>
 </body>
 </html>
